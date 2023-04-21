@@ -3,6 +3,10 @@ import bcrypt from "bcrypt";
 
 const usuarioSchema = mongoose.Schema(
   {
+    avatar: {
+      type: String,
+      default: ''
+    },
     nombre: {
       type: String,
       required: true,

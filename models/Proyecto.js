@@ -2,6 +2,12 @@ import mongoose from "mongoose";
 
 const proyectosSchema = mongoose.Schema(
   {
+    icono:{
+      type: String,
+      trim: true,
+      require: true,
+      default: ''
+    },
     nombre: {
       type: String,
       trim: true,

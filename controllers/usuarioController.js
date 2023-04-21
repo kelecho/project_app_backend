@@ -2,6 +2,7 @@ import Usuario from "../models/Usuario.js";
 import generarId from "../helpers/generarId.js";
 import generarJWT from "../helpers/generarJWT.js";
 import { emailRegistro, emailOlvidePassword } from "../helpers/email.js";
+import { borrarImagen, subirAvatar } from "../helpers/imagenes.js";
 
 const registrar = async (req, res) => {
   //Evitar registros duplicados
@@ -135,6 +136,34 @@ const perfil = async (req, res) => {
   res.json(usuario);
 };
 
+const actualizarPerfil = async(req,res)=>{
+  const {nombre} = req.body;
+  const {avatar} = req.files;
+  const {id} = req.params;
+  try {
+    const usuario = await Usuario.findById(id);
+    if(nombre){
+      const usuarioActualizado = await Usuario.findOneAndUpdate({_id: id},{$set:{nombre}});
+      await usuarioActualizado.save();
+    }
+    if(usuario.avatar && avatar){
+      await borrarImagen(usuario.avatar);
+    }
+    if(avatar){
+      const url = await subirAvatar(avatar.path);
+      if(url){
+      const usuarioActualizado = await Usuario.findOneAndUpdate({_id: id},{$set:{avatar:url}});
+      await usuarioActualizado.save();
+      }else{
+        throw new Error('No se pudo subir la imagen')
+      }
+    }
+    res.json({msg: 'Actualizado'})
+  } catch (error) {
+    res.json({msg: error.message})
+  }
+}
+
 export {
   registrar,
   autenticar,
@@ -143,4 +172,5 @@ export {
   comprobarToken,
   nuevoPassword,
   perfil,
+  actualizarPerfil
 };
