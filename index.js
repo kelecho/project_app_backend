@@ -5,6 +5,7 @@ import conectarDB from "./config/db.js";
 import usuarioRoutes from "./routes/usuarioRoutes.js";
 import proyectoRoutes from "./routes/proyectoRoutes.js";
 import tareaRoutes from "./routes/tareaRoutes.js";
+import pagosRoutes from "./routes/pagosRoutes.js"
 
 const app = express();
 app.use(express.json());
@@ -32,6 +33,7 @@ app.use(cors(corsOptions));
 app.use("/api/usuarios", usuarioRoutes);
 app.use("/api/proyectos", proyectoRoutes);
 app.use("/api/tareas", tareaRoutes);
+app.use("/api/pagos", pagosRoutes);
 
 const PORT = process.env.PORT || 4000;
 
