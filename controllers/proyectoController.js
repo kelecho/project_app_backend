@@ -15,7 +15,7 @@ const nuevoProyecto = async (req, res) => {
 
   const proyecto = await new Proyecto({nombre , descripcion , fechaEntrega , cliente});
   proyecto.creador = req.usuario._id;
-  if(proyecto){
+  if(proyecto && icono){
     const url = await subirIconoProyecto(icono.path);
     proyecto.icono = await url;
   }
