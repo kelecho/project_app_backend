@@ -1,5 +1,6 @@
 import { borrarImagen, subirIconoProyecto } from "../helpers/imagenes.js";
 import Proyecto from "../models/Proyecto.js";
+import Tarea from "../models/Tarea.js"
 
 const obtenerProyectos = async (req, res) => {
   const proyectos = await Proyecto.find()
@@ -95,6 +96,7 @@ const eliminarProyecto = async (req, res) => {
   }
 
   try {
+    await Tarea.deleteMany({proyecto: proyecto._id});
     await proyecto.deleteOne();
     await borrarImagen(proyecto.icono)
     res.json({ msg: "Proyecto Eliminado" });
