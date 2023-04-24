@@ -62,9 +62,10 @@ const editarProyecto = async (req, res) => {
   if(proyecto.icono && icono){
     await borrarImagen(proyecto.icono)
   }
-  const url = await subirIconoProyecto(icono.path)
-  
-  proyecto.icono = url || proyecto.icono;
+  if(icono){
+    const url = await subirIconoProyecto(icono.path)
+    proyecto.icono = url || proyecto.icono;
+  }
   proyecto.nombre = req.body.nombre || proyecto.nombre;
   proyecto.descripcion = req.body.descripcion || proyecto.descripcion;
   proyecto.fechaEntrega = req.body.fechaEntrega || proyecto.fechaEntrega;
