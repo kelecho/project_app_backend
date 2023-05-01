@@ -1,5 +1,6 @@
 import { borrarImagen, subirIconoProyecto } from "../helpers/imagenes.js";
 import Proyecto from "../models/Proyecto.js";
+import Tarea from "../models/Tarea.js"
 
 const obtenerProyectos = async (req, res) => {
   const proyectos = await Proyecto.find()
@@ -15,7 +16,7 @@ const nuevoProyecto = async (req, res) => {
 
   const proyecto = await new Proyecto({nombre , descripcion , fechaEntrega , cliente});
   proyecto.creador = req.usuario._id;
-  if(proyecto){
+  if(proyecto && icono){
     const url = await subirIconoProyecto(icono.path);
     proyecto.icono = await url;
   }
@@ -62,9 +63,10 @@ const editarProyecto = async (req, res) => {
   if(proyecto.icono && icono){
     await borrarImagen(proyecto.icono)
   }
-  const url = await subirIconoProyecto(icono.path)
-  
-  proyecto.icono = url || proyecto.icono;
+  if(icono){
+    const url = await subirIconoProyecto(icono.path)
+    proyecto.icono = url || proyecto.icono;
+  }
   proyecto.nombre = req.body.nombre || proyecto.nombre;
   proyecto.descripcion = req.body.descripcion || proyecto.descripcion;
   proyecto.fechaEntrega = req.body.fechaEntrega || proyecto.fechaEntrega;
@@ -94,6 +96,7 @@ const eliminarProyecto = async (req, res) => {
   }
 
   try {
+    await Tarea.deleteMany({proyecto: proyecto._id});
     await proyecto.deleteOne();
     await borrarImagen(proyecto.icono)
     res.json({ msg: "Proyecto Eliminado" });
