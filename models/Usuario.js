@@ -5,7 +5,7 @@ const usuarioSchema = mongoose.Schema(
   {
     avatar: {
       type: String,
-      default: ''
+      default: "",
     },
     nombre: {
       type: String,
@@ -27,6 +27,10 @@ const usuarioSchema = mongoose.Schema(
       type: String,
     },
     confirmado: {
+      type: Boolean,
+      default: false,
+    },
+    premiun: {
       type: Boolean,
       default: false,
     },
