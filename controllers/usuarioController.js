@@ -22,7 +22,7 @@ const registrar = async (req, res) => {
       nombre: usuario.nombre,
       token: usuario.token,
     });
-    res.json({ msg: "Usuario creado satisfactoriamente!" });
+    res.json({ msg: "Usuario creado satisfactoriamente! Verifique su correo para la confirmacion" });
   } catch (error) {
     console.log(error);
   }
