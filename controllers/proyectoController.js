@@ -1,6 +1,7 @@
 import { borrarImagen, subirIconoProyecto } from "../helpers/imagenes.js";
 import Proyecto from "../models/Proyecto.js";
 import Tarea from "../models/Tarea.js"
+import Usuario from "../models/Usuario.js";
 
 const obtenerProyectos = async (req, res) => {
   const proyectos = await Proyecto.find()
@@ -11,6 +12,13 @@ const obtenerProyectos = async (req, res) => {
 };
 
 const nuevoProyecto = async (req, res) => {
+  const userId = req.usuario._id;
+  const usuario = await Usuario.findById({_id:userId})
+  const proyectos = await Proyecto.find({creador: userId})
+  if(usuario.premium === false && proyectos.length === 5){
+    return res.json({msg: "No puedes crear mas de 5 proyectos"});
+  }
+
   const {nombre,descripcion,fechaEntrega,cliente} = req.body;
   const {icono} = req.files;
 
