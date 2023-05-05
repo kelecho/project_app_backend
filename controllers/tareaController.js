@@ -1,9 +1,17 @@
 import Proyecto from "../models/Proyecto.js";
 import Tarea from "../models/Tarea.js";
+import Usuario from "../models/Usuario.js";
 
 const agregarTarea = async (req, res) => {
+  const userId = req.usuario._id
   const { proyecto } = req.body;
+  
   const existeProyecto = await Proyecto.findById(proyecto);
+  const usuario = await Usuario.findById({_id:userId})
+  const tareas = await Tarea.find({proyecto})
+  if(usuario.premium === false && tareas.length === 5){
+    return res.json({msg: "Alcanzo el limite maximo de tareas en este proyecto"})
+  }
 
   if (!existeProyecto) {
     const error = new Error("Proyecto no existe");
@@ -39,12 +47,11 @@ const obtenerTarea = async (req, res) => {
     return res.status(403).json({ msg: error.message });
   }
   return res.json(tarea);
-  console.log(tarea);
 };
 
 const actualizarTarea = async (req, res) => {
   const { id } = req.params;
-  const tarea = await Tarea.findById(id).populate("proyecto");
+  const tarea = await Tarea.findById({_id:id}).populate("proyecto");
 
   if (!tarea) {
     const error = new Error("Tarea no encontrada");
@@ -71,8 +78,7 @@ const actualizarTarea = async (req, res) => {
 
 const eliminarTarea = async (req, res) => {
   const { id } = req.params;
-  const tarea = await Tarea.findById(id).populate("proyecto");
-
+  const tarea = await Tarea.findById({_id:id}).populate("proyecto")
   if (!tarea) {
     const error = new Error("Tarea no encontrada");
     return res.status(404).json({ msg: error.message });
