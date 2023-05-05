@@ -18,3 +18,4 @@ router
   .route("/create")
   .post(checkAuth, create)
 
+export default router;
