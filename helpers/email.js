@@ -13,7 +13,7 @@ export const emailRegistro = async ({ email, nombre, token }) => {
 
   // Informacion del email
   const info = await transport.sendMail({
-    from: '"ProyectosApp - Administrador de Proyectos" <cuentas@uptask.com>',
+    from: '"ProyectosApp - Administrador de Proyectos" <cuentas@proyectosapp.com>',
     to: email,
     subject: "ProyectosApp - Confirma tu Cuenta",
     text: "Comprueba tu cuenta en ProyectosApp",
@@ -134,7 +134,7 @@ export const emailRegistro = async ({ email, nombre, token }) => {
 														<table class="image_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-																	<div class="alignment" align="center" style="line-height:10px"><a href="www.example.com" target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://909601fbbf.imgdist.com/public/users/Integrators/BeeProAgency/971967_956589/proyectos.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 100%;" width="288" alt="UpTask" title="UpTask"></a></div>
+																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://res.cloudinary.com/desuu56op/image/upload/v1683056978/ProyectosAPP/2_qifixo.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 50%;" width="288" alt="ProyectosApp" title="ProyectosApp"></a></div>
 																</td>
 															</tr>
 														</table>
@@ -196,7 +196,7 @@ export const emailRegistro = async ({ email, nombre, token }) => {
 																<td class="pad" style="padding-bottom:10px;padding-left:40px;padding-right:40px;padding-top:10px;">
 																	<div style="font-family: sans-serif">
 																		<div class style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 18px; color: #555555; line-height: 1.5;">
-																			<p style="margin: 0; font-size: 12px; text-align: left; mso-line-height-alt: 18px;">Para utilizar el servicio y formar parte de Uptask debes confirmar tu correo.</p>
+																			<p style="margin: 0; font-size: 12px; text-align: left; mso-line-height-alt: 18px;">Para utilizar el servicio y formar parte de ProyectosApp debes confirmar tu correo.</p>
 																		</div>
 																	</div>
 																</td>
@@ -212,7 +212,8 @@ export const emailRegistro = async ({ email, nombre, token }) => {
 														<table class="image_block block-6" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-																	<div class="alignment" align="center" style="line-height:10px"><a href="www.example.com" target="_blank" style="outline:none" tabindex="-1"><img class="big" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/971967_956589/Dise%C3%B1o%20sin%20t%C3%ADtulo.png" style="display: block; height: auto; border: 0; width: 640px; max-width: 100%;" width="640" alt="Image of lock &amp; key." title="Image of lock &amp; key."></a></div>
+
+																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="big" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/971967_956589/Dise%C3%B1o%20sin%20t%C3%ADtulo.png" style="display: block; height: auto; border: 0; width: 640px; max-width: 80%;" width="640" alt="Image of lock &amp; key." title="Image of lock &amp; key."></a></div>
 																</td>
 															</tr>
 														</table>
@@ -233,7 +234,7 @@ export const emailRegistro = async ({ email, nombre, token }) => {
 														<table class="image_block block-9" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-																	<div class="alignment" align="center" style="line-height:10px"><a href="www.example.com" target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://909601fbbf.imgdist.com/public/users/Integrators/BeeProAgency/971967_956589/proyectos.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 100%;" width="288" alt="UpTask" title="UpTask"></a></div>
+																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://res.cloudinary.com/desuu56op/image/upload/v1683056978/ProyectosAPP/2_qifixo.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 50%;" width="288" alt="ProyectosApp" title="ProyectosApp"></a></div>
 																</td>
 															</tr>
 														</table>
@@ -316,7 +317,6 @@ export const emailRegistro = async ({ email, nombre, token }) => {
 	</body>
 	
 	</html>
-    
     `,
   });
 };
@@ -455,7 +455,8 @@ export const emailOlvidePassword = async ({ email, nombre, token }) => {
 														<table class="image_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-																	<div class="alignment" align="center" style="line-height:10px"><a href="www.example.com" target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://909601fbbf.imgdist.com/public/users/Integrators/BeeProAgency/971967_956589/proyectos.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 100%;" width="288" alt="UpTask" title="UpTask"></a></div>
+																	
+																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://res.cloudinary.com/desuu56op/image/upload/v1683056978/ProyectosAPP/2_qifixo.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 50%;" width="288" alt="ProyectosApp" title="ProyectosApp"></a></div>
 																</td>
 															</tr>
 														</table>
@@ -535,7 +536,8 @@ export const emailOlvidePassword = async ({ email, nombre, token }) => {
 														<table class="image_block block-6" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-																	<div class="alignment" align="center" style="line-height:10px"><a href="www.example.com" target="_blank" style="outline:none" tabindex="-1"><img class="big" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/971967_956589/Dise%C3%B1o%20sin%20t%C3%ADtulo.png" style="display: block; height: auto; border: 0; width: 640px; max-width: 100%;" width="640" alt="Image of lock &amp; key." title="Image of lock &amp; key."></a></div>
+
+																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="big" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/971967_956589/Dise%C3%B1o%20sin%20t%C3%ADtulo.png" style="display: block; height: auto; border: 0; width: 640px; max-width: 80%;" width="640" alt="Image of lock &amp; key." title="Image of lock &amp; key."></a></div>
 																</td>
 															</tr>
 														</table>
@@ -568,7 +570,8 @@ export const emailOlvidePassword = async ({ email, nombre, token }) => {
 														<table class="image_block block-9" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-																	<div class="alignment" align="center" style="line-height:10px"><a href="www.example.com" target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://909601fbbf.imgdist.com/public/users/Integrators/BeeProAgency/971967_956589/proyectos.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 100%;" width="288" alt="UpTask" title="UpTask"></a></div>
+
+																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://res.cloudinary.com/desuu56op/image/upload/v1683056978/ProyectosAPP/2_qifixo.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 50%;" width="288" alt="ProyectosApp" title="ProyectosApp"></a></div>
 																</td>
 															</tr>
 														</table>
