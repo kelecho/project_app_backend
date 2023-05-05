@@ -35,8 +35,8 @@ router.post('/checkout', async (req, res) => {
   // paymentService.createPaymentIntent(req.body)
   const {line_items} = req.body;
   const session = await stripe.checkout.sessions.create({
-    success_url: 'http://localhost:5173/proyectos/pago-exitoso',
-    cancel_url: 'http://localhost:5173/proyectos/pago-fallido',
+    success_url: `${process.env.FRONTEND_URL}'/proyectos/pago-exitoso'`,
+    cancel_url: `${process.env.FRONTEND_URL}'/proyectos/pago-fallido'`,
     line_items: [
       { price: 'price_1MuLNbAYYDxpAS8qvPpiozwF', quantity: 1 },
     ],
