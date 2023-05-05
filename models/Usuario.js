@@ -30,7 +30,7 @@ const usuarioSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    premiun: {
+    premium: {
       type: Boolean,
       default: false,
     },
