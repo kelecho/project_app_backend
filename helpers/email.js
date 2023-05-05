@@ -201,18 +201,18 @@ export const emailRegistro = async ({ email, nombre, token }) => {
 																	</div>
 																</td>
 															</tr>
-														</table>
-														<table class="button_block block-4" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-															<tr>
-																<td class="pad" style="padding-left:10px;padding-right:10px;padding-top:15px;text-align:center;">
-																	<div class="alignment" align="center"><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="www.example.com" style="height:62px;width:190px;v-text-anchor:middle;" arcsize="57%" stroke="false" fillcolor="#0068a5"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px"><![endif]--><a href="${process.env.FRONTEND_URL}/confirmar/${token}" target="_blank" style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#0068a5;border-radius:35px;width:auto;border-top:0px solid transparent;font-weight:undefined;border-right:0px solid transparent;border-bottom:0px solid transparent;border-left:0px solid transparent;padding-top:15px;padding-bottom:15px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;"><span style="padding-left:30px;padding-right:30px;font-size:16px;display:inline-block;letter-spacing:normal;"><span dir="ltr" style="margin: 0; word-break: break-word; line-height: 32px;"><strong>Confirmar cuenta</strong></span></span></a><!--[if mso]></center></v:textbox></v:roundrect><![endif]--></div>
-																</td>
-															</tr>
-														</table>
+															<table class="button_block block-4" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																<tr>
+																	<td class="pad" style="padding-left:10px;padding-right:10px;padding-top:15px;text-align:center;">
+																		<div class="alignment" align="center"><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="www.example.com" style="height:62px;width:190px;v-text-anchor:middle;" arcsize="57%" stroke="false" fillcolor="#0068a5"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px"><![endif]--><a href="${process.env.FRONTEND_URL}/confirmar/${token}" target="_blank" style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#0068a5;border-radius:35px;width:auto;border-top:0px solid transparent;font-weight:undefined;border-right:0px solid transparent;border-bottom:0px solid transparent;border-left:0px solid transparent;padding-top:15px;padding-bottom:15px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;"><span style="padding-left:30px;padding-right:30px;font-size:16px;display:inline-block;letter-spacing:normal;"><span dir="ltr" style="margin: 0; word-break: break-word; line-height: 32px;"><strong>Confirmar cuenta</strong></span></span></a><!--[if mso]></center></v:textbox></v:roundrect><![endif]--></div>
+																	</td>
+																</tr>
+															</table>
 														<div class="spacer_block block-5" style="height:73px;line-height:73px;font-size:1px;">&#8202;</div>
 														<table class="image_block block-6" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+
 																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="big" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/971967_956589/Dise%C3%B1o%20sin%20t%C3%ADtulo.png" style="display: block; height: auto; border: 0; width: 640px; max-width: 80%;" width="640" alt="Image of lock &amp; key." title="Image of lock &amp; key."></a></div>
 																</td>
 															</tr>
@@ -317,8 +317,6 @@ export const emailRegistro = async ({ email, nombre, token }) => {
 	</body>
 	
 	</html>
-   
-	
     `,
   });
 };
@@ -457,6 +455,7 @@ export const emailOlvidePassword = async ({ email, nombre, token }) => {
 														<table class="image_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+																	
 																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://res.cloudinary.com/desuu56op/image/upload/v1683056978/ProyectosAPP/2_qifixo.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 50%;" width="288" alt="ProyectosApp" title="ProyectosApp"></a></div>
 																</td>
 															</tr>
@@ -537,6 +536,7 @@ export const emailOlvidePassword = async ({ email, nombre, token }) => {
 														<table class="image_block block-6" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+
 																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="big" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/971967_956589/Dise%C3%B1o%20sin%20t%C3%ADtulo.png" style="display: block; height: auto; border: 0; width: 640px; max-width: 80%;" width="640" alt="Image of lock &amp; key." title="Image of lock &amp; key."></a></div>
 																</td>
 															</tr>
@@ -570,6 +570,7 @@ export const emailOlvidePassword = async ({ email, nombre, token }) => {
 														<table class="image_block block-9" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 															<tr>
 																<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+
 																	<div class="alignment" align="center" style="line-height:10px"><a target="_blank" style="outline:none" tabindex="-1"><img class="fullMobileWidth" src="https://res.cloudinary.com/desuu56op/image/upload/v1683056978/ProyectosAPP/2_qifixo.png" style="display: block; height: auto; border: 0; width: 288px; max-width: 50%;" width="288" alt="ProyectosApp" title="ProyectosApp"></a></div>
 																</td>
 															</tr>
